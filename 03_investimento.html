@@ -8,10 +8,22 @@
     */
 
     //ENTRADA
+    let mensal = 0;
+    //PROCESSAMENTO   
+    for (let i = 1; i <= 96; i++) {
+        mensal += 100;
+        mensal = mensal * 1.018;
 
-    
-    //PROCESSAMENTO
-    
+        if (i == 24) {
+            alert(`O valor total ao final de 24 meses será de R$${mensal.toFixed(2)} e o valor faturado foi de R$${(mensal - (100*24)).toFixed(2)}`)
+        } 
+        if (i == 48) {
+            alert(`O valor total ao final de 48 meses será de R$${mensal.toFixed(2)} e o valor faturado foi de R$${(mensal - (100*48)).toFixed(2)}`)
+        } 
+        if (i == 96) {
+            alert(`O valor total ao final de 96 meses será de R$${mensal.toFixed(2)} e o valor faturado foi de R$${(mensal - (100*96)).toFixed(2)}`)
+        } 
+    }
     
     //SAÍDA
     

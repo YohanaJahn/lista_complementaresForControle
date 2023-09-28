@@ -3,11 +3,14 @@
     //Escreva todos os números na tela, até o número informado pelo usuário, colocando um número em cada linha e começando do número 1!
 
     //Entrada
-
+    const num = Number(prompt("Insira um valor INTEIRO!!"))
     
     //Processamento
-    
+    let numerosEntre = []
+    for (let i = 1; i <= num; i++) {
+        numerosEntre.push(i);
+    }
     
     //Saída
-
+    alert(numerosEntre.join(" - ") + ".")
 </script>

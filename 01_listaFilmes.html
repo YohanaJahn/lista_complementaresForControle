@@ -9,12 +9,37 @@
     */
 
     //ENTRADA
+    const filmesCadastro = Number(prompt("Quantos filmes quer cadastrar?"));
+    let drama = [];
+    let romance = [];
+    let comedia = [];
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let i = 1; i <= filmesCadastro; i++) {
+        const filme = prompt(`Qual o nome do filme de número ${i}?`).trim();
+        const genero = prompt(`O gênero do filme inserido anteriormente é C-comédia, R-romance ou D-drama?`).toUpperCase().trim();
+        switch (genero) {
+            case "D":
+                drama.push(filme);
+                break;
+            case "C":
+                comedia.push(filme);
+                break;
+            case "R":
+                romance.push(filme);
+                break;
+            default:
+                alert(`O filme não pertence a nenhum dos gêneros classificados.`);
+                break;
+        }
+    }
+    if (romance.length > 0)
+        alert(`Os filmes de romance são: ${romance.join(", ")}`);
+    if (drama.length > 0)
+        alert(`Os filmes de drama são: ${drama.join(", ")}`);
+    if (comedia.length > 0)
+        alert(`Os filmes de comédia são: ${comedia.join(", ")}`);
     //SAÍDA
-    
-    
+
+
 </script>

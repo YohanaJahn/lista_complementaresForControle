@@ -18,8 +18,15 @@
 
     
     //PROCESSAMENTO
-    
-    
+    let itens = ["tomate", "batata", "batata-doce", "alface", "cebola", "cebolinha", "beterraba"]
+    let valores = [3.90, 3.40, 4.70, 1.50, 2.90, 1.40, 4.10]
+    let total = 0;
+    for (let i = 0; i < itens.length; i++) {
+        let alimento = Number(prompt(`Quantos(as) unidades ou kgs de ${itens[i]}s você vendeu?`).trim());
+        let valor = alimento * valores[i];
+        total += valor
+    }
+    alert(`Valor total será de R$${total.toFixed(2).replace(".", ",")}.`)
     //SAÍDA
     
 </script>
