@@ -8,12 +8,22 @@
     */
 
     //ENTRADA
-
+    let medidasInformadas = parseInt(prompt(`Quantas pessoas terão sua medida informada?`).trim());
     
     //PROCESSAMENTO
-    
+    let maiorAltura = 0;
+    let menorAltura = Infinity;
+    for (let i = 1; i <= medidasInformadas; i++) {
+        const altura = Number(prompt(`Qual a altura da ${i}ª pessoa? (em metros)`).trim().replace(",","."));
+        if (maiorAltura < altura)
+        maiorAltura = altura;
+        if (menorAltura > altura)
+        menorAltura = altura;
+    }
     
     //SAÍDA
+    alert(`Menor altura: ${menorAltura.toFixed(2).replace(".",",")} metros.\n
+    Maior altura: ${maiorAltura.toFixed(2).replace(".",",")} metros.`);
     
 
 </script>

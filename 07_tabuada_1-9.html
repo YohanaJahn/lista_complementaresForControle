@@ -5,10 +5,21 @@
     */
 
     //ENTRADA
-
+    let fator = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let produtos = [];
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 9; i++) {
+        produtos.push(`Tabuada do ${i} \n`);
+        document.write(`Tabuada do ${i} <br>`);
+        for (let index = 1; index <= 10; index++) {
+            const resultado = i * index
+            produtos.push(`${i} x ${index} = ${resultado} \n`);
+            document.write(`${i} x ${index} = ${resultado} <br>`);
+        }
+        produtos.push(`\n` + ` `)
+        document.write("<br>");
+    }
     
     //SAÍDA
     

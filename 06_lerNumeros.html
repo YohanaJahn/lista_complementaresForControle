@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let Menor50 = [];
+    let Maior50 = [];
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let i = 0; i < listaDeNumeros.length; i++) {
+        let num = listaDeNumeros[i];
+        if (num < 50)
+            Menor50.push(num);
+        if (num > 50)
+            Maior50.push(num);
+    }
+    let porcentagem = ((listaDeNumeros.length * Menor50.length) / 100) * 100;
+
     //SAÍDA
-    
+    document.write(`Os números menores que 50 são: ${Menor50.join(", ")} "${porcentagem}%"<br>
+    Os números maiores que 50 são: ${Maior50.join(", ")} "${(porcentagem - 100) * -1}%"`);
+
 
 </script>

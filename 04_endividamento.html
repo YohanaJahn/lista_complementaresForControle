@@ -8,11 +8,17 @@
 
     //ENTRADA
 
-    
+    let banco = 10000
+    let meses = 0
     //PROCESSAMENTO
-    
+    for (let i = 1; banco >= 0; i++){
+        banco = (banco - 300) * 1.03;
+        meses++;
+    }
     
     //SAÍDA
+    alert(`${meses} meses`);
+
     
 
 </script>

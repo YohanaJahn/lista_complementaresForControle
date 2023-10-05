@@ -7,12 +7,17 @@
     */
 
     //ENTRADA
-
-    
+    const num = Number(prompt("Insira um valor INTEIRO!!!!").trim());
+    let soma = 1
+    let mensagem = "1 ";
     //PROCESSAMENTO
-    
+    for (let i = 2; i <= num; i++) {
+        soma = soma+1 / i;
+        mensagem = mensagem + " + 1 /" + i;
+    }
     
     //SAÍDA
+    alert(soma);
+    alert(mensagem + ` = ${soma}`);
     
-
 </script>
